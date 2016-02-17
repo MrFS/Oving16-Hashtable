@@ -23,12 +23,13 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtKar = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -37,36 +38,20 @@ Partial Class Form1
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(0, 24)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(467, 336)
+        Me.ListBox1.Size = New System.Drawing.Size(215, 98)
         Me.ListBox1.TabIndex = 0
         '
-        'TextBox1
+        'txtKar
         '
-        Me.TextBox1.Location = New System.Drawing.Point(500, 79)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox1.TabIndex = 1
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(633, 79)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(73, 20)
-        Me.TextBox2.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(500, 60)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Fag / Fagkode:"
+        Me.txtKar.Location = New System.Drawing.Point(221, 45)
+        Me.txtKar.Name = "txtKar"
+        Me.txtKar.Size = New System.Drawing.Size(73, 20)
+        Me.txtKar.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(633, 63)
+        Me.Label2.Location = New System.Drawing.Point(218, 29)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 13)
         Me.Label2.TabIndex = 4
@@ -74,35 +59,67 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(633, 105)
+        Me.Button1.Location = New System.Drawing.Point(300, 45)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(73, 23)
+        Me.Button1.Size = New System.Drawing.Size(73, 20)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Legg til"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(753, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(379, 24)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(300, 71)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(73, 20)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "Regn snitt"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(221, 71)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(73, 20)
+        Me.Button3.TabIndex = 10
+        Me.Button3.Text = "Vis"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(221, 97)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(73, 20)
+        Me.Button4.TabIndex = 11
+        Me.Button4.Text = "Clear"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(753, 360)
+        Me.ClientSize = New System.Drawing.Size(379, 122)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtKar)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -110,10 +127,11 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents txtKar As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
