@@ -13,7 +13,6 @@
         karakter = txtKar.Text.ToUpper
 
         Try
-
             Select Case karakter
                 Case "A"
                     karakterAntall(karakter) += 1
@@ -51,8 +50,19 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            tallsnitt = ((6 * karakterAntall("A")) + (5 * karakterAntall("B")) + (4 * karakterAntall("C")) + (3 * karakterAntall("D")) + (2 * karakterAntall("E")) + (1 * karakterAntall("F"))) /
-                ((karakterAntall("A")) + (karakterAntall("B")) + (karakterAntall("C")) + (karakterAntall("D")) + (karakterAntall("E")) + (karakterAntall("F")))
+            tallsnitt = ((6 * karakterAntall("A")) +
+                         (5 * karakterAntall("B")) +
+                         (4 * karakterAntall("C")) +
+                         (3 * karakterAntall("D")) +
+                         (2 * karakterAntall("E")) +
+                         (1 * karakterAntall("F"))) /
+                            ((karakterAntall("A")) +
+                             (karakterAntall("B")) +
+                             (karakterAntall("C")) +
+                             (karakterAntall("D")) +
+                             (karakterAntall("E")) +
+                             (karakterAntall("F")))
+
             ListBox1.Items.Add("Snitt: " & tallsnitt)
             tallsnitt = Math.Round(tallsnitt)
             ListBox1.Items.Add("Gjennomsnitt av karakterene (avrundet): " & tallsnitt)
